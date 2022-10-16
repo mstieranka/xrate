@@ -1,13 +1,17 @@
-# React TypeScript Template
+# XRate - React Currency Converter
 
-This is a simple template, set up with the following libraries:
+Create a simple currency conversion app per following rules:
 
-- pnpm
-- React
-- TypeScript
-- TailwindCSS (can be removed by removing `postcss`, `autoprefixer` and `tailwindcss`)
-- Material Design Icons (can be removed by removing `@mdi/js` and `@mdi/react`)
-- ESLint and Prettier
+- source currency and amount as well as target currency and amount are editable in real time
+- small number of currencies (~4)
+- use static dummy data for conversion rates, conversion accuracy is not a priority
+- use React
+- use state management solution of your choice
+- focus on optimal application state shape
+- write readable and maintainable code
+- add some minimal styling to make the UI concise, not necessarily beautiful
+
+This repo is based off of [react-ts-template](https://github.com/mstieranka/react-ts-template).
 
 ## How to run
 
