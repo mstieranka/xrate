@@ -2,12 +2,15 @@
   "name": "xrate",
   "version": "1.0.0",
   "description": "Simple currency converter built in React.",
+  "homepage": "https://mstieranka.github.io/xrate",
   "source": "src/index.html",
   "scripts": {
     "clean:cache": "rimraf .parcel-cache",
     "clean:dist": "rimraf dist",
     "start": "pnpm run clean:cache && parcel",
-    "build": "pnpm run clean:dist && pnpm run clean:cache && parcel build"
+    "build": "pnpm run clean:dist && pnpm run clean:cache && parcel build",
+    "predeploy": "pnpm run build",
+    "deploy": "gh-pages -d dist"
   },
   "author": "Matej Stieranka <matej@stieranka.eu>",
   "license": "MIT-0",
@@ -22,6 +25,7 @@
     "eslint": "^8.25.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-import": "^2.26.0",
+    "gh-pages": "^4.0.0",
     "parcel": "^2.7.0",
     "postcss": "^8.4.18",
     "prettier": "^2.7.1",
