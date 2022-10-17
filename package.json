@@ -1,7 +1,7 @@
 {
-  "name": "react-ts-template",
+  "name": "xrate",
   "version": "1.0.0",
-  "description": "A simple template repo set up with React and Parcel.",
+  "description": "Simple currency converter built in React.",
   "source": "src/index.html",
   "scripts": {
     "clean:cache": "rimraf .parcel-cache",
