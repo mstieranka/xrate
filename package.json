@@ -9,8 +9,7 @@
     "clean:dist": "rimraf dist",
     "start": "pnpm run clean:cache && parcel",
     "build": "pnpm run clean:dist && pnpm run clean:cache && parcel build",
-    "predeploy": "pnpm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "pnpm run build && gh-pages -d dist"
   },
   "author": "Matej Stieranka <matej@stieranka.eu>",
   "license": "MIT-0",
