@@ -19,11 +19,7 @@ First, ensure that you have `node.js v16.x` and `pnpm 7.x` installed:
 
 ```bash
 node -v
-pnpm -v
-
-# when running node 16.17+, you can install pnpm with the following:
-corepack enable
-corepack prepare pnpm@latest --activate
+pnpm -v || npm install -g pnpm
 ```
 
 Then install packages with `pnpm install`.
@@ -32,4 +28,4 @@ After that, you can run `pnpm start` to get a hot-reloading preview or `pnpm run
 
 ## Extra notes
 
-This app supports both dark and light theme based on browser theme (using `prefers-color-scheme: dark`).
+This app supports both dark and light theme based on browser theme (using `prefers-color-scheme: dark`). Also try swapping the currencies :)
