@@ -2,7 +2,7 @@ import { atom } from 'jotai';
 import { Currency } from './currency';
 
 export const getExchangeRates = async () => {
-  await new Promise((r) => setTimeout(r, 5000));
+  await new Promise((r) => setTimeout(r, 2000));
   return new Map([
     [
       Currency.CAD,
