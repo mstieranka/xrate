@@ -66,8 +66,8 @@ export const targetAmountAtom = atom<number, number | undefined, Promise<void>>(
       unstable_promise: true,
     });
 
-    const getRate = (firstAtom: Atom<Currency>, secondAtom: Atom<Currency>) =>
-      exchangeRates.get(get(firstAtom))?.get(get(secondAtom)) ?? 1;
+    const getRate = (fromAtom: Atom<Currency>, toAtom: Atom<Currency>) =>
+      exchangeRates.get(get(fromAtom))?.get(get(toAtom)) ?? 1;
 
     if (newValue) {
       set(targetAmountValueAtom, newValue);

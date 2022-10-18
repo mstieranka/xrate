@@ -48,7 +48,7 @@ export const CurrencyInput = (props: CurrencyInputProps) => {
       <select
         className={classNames(
           inputClass,
-          'flex-grow-0 min-w-fit flex-shrink-0 rounded-r border-l-transparent focus:border-l-current'
+          'flex-grow-0 flex-shrink-0 min-w-fit rounded-r border-l-transparent focus:border-l-current'
         )}
         value={props.inputCurrency}
         onChange={onCurrencyChange}
