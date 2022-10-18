@@ -23,11 +23,13 @@ export const CurrencyConverter = () => {
 
   const swapCurrencies = useSwapCurrencies();
 
-  const [iconSpinSpeed, setIconSpinSpeed] = useState<number>(0);
+  const [iconClass, setIconClass] = useState<string>('');
   const onSwapClick = () => {
-    setIconSpinSpeed(0.3);
-    setTimeout(() => setIconSpinSpeed(0), 150);
+    setIconClass('spin');
     swapCurrencies();
+  };
+  const onSpinEnd = () => {
+    setIconClass('');
   };
 
   return (
@@ -43,11 +45,9 @@ export const CurrencyConverter = () => {
         className='hover:bg-slate-300 hover:dark:bg-slate-700 p-1 rounded cursor-pointer'
         onClick={onSwapClick}
       >
-        <Icon
-          path={mdiSwapHorizontalCircleOutline}
-          size='2rem'
-          spin={iconSpinSpeed}
-        />
+        <div className={iconClass} onAnimationEnd={onSpinEnd}>
+          <Icon path={mdiSwapHorizontalCircleOutline} size='2rem' />
+        </div>
       </button>
       <CurrencyInput
         currencies={currencies}
